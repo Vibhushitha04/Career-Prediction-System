@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="page3.css">
+    </head>
+    <body >
+        <div class="glass">
+            <h1 style="color:rgb(100, 100, 100);">Queries/Feedback</h1>
+            <h2 style="color:rgb(100, 100, 100);">Chat with us!</h2>
+            <div class="input" style="color:black;">
+            <input
+            type="text"
+            id="userBox"
+            onkeydown="if(event.keyCode == 13){ talk()}"
+            placeholder="Type your Question"
+            />
+            </div>
+            <p id="chatLog" ><h3 style="color:rgb(100, 100, 100);" >Answer</h3></p>
+    </body>
+    <script>
+        function talk(){
+            var know = {
+                "Hi":"Hello there!!",
+            "Who are you" : "Hello, We are predictors! ",
+        "who are you" : "Hello, We are predictors! ",
+            "How are you" : "Good :)",
+        "how are you" : "Good :)",
+            "What can i do for me" : "Predict your job using your skills",
+            "Is this prediction correct":"YEAH!.It is predicted based on your input",
+        "Can you change this prediction":"No,It is predicted based on your skills given",
+            "Ok" : "Thank You So Much ",
+        "Good":"Thanks for your feedback",
+        "Bad":"Sorry, Will try to improve",
+        "Bye" : "Okay! Will meet soon.."
+            };
+            var user = document.getElementById('userBox').value;
+            document.getElementById('chatLog').innerHTML = user + "<br>";
+            if (user in know) {
+            document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+            }else{
+            document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand <br>";
+            }
+            }
+        </script>
+          
+</html>

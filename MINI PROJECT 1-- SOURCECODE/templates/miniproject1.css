@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.login-box{
+  width:500px;
+  height:500px;
+  background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color:white;
+  top:50%;
+  left:50%;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  box-sizing:border-box;
+}
+p{
+  /* text-align:center; */
+  font-family: 'Raleway', sans-serif;
+  font-size:20px;
+  font-weight:700;
+  top:40px;
+  left:50px;
+  position:relative;
+}
+input{
+  /* background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+  top:40px;
+  position:relative;
+}
+ion-icon {
+  float: right;
+  right:80px;
+  top:30px;
+  position: relative;
+}
+.login-box input[type="text"]{
+  color: white;
+  border: none;
+  height:20px;
+  width: 53vh;
+  left: 50px;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 2px 5px;
+}
+.login-box input[type="email"]{
+  color: white;
+  height:20px;
+  width: 53vh;
+  left: 50px;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 2px 5px;
+}
+button{
+  background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border-color:white;
+text-align: center;
+width:15%;
+  height:20px;
+  top:250px;
+  left:210px;
+  position:relative;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(255, 255, 255, 0.873);
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+
+::placeholder { 
+    color:white;
+    opacity: 1; 
+    text-align: center;
+}
+body{
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+background-size:cover;
+      -webkit-animation: slidein 100s;
+      animation: slidein 100s;
+
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:2000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:2000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+font-family: 'Raleway', sans-serif;
+  }

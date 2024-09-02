@@ -1,0 +1,98 @@
+.glass {
+    font-family: 'Raleway', sans-serif;
+    font-size:15px;
+    font-weight:200;
+    font-color:black;
+        top:230px;
+        left:600px;
+        position:absolute;
+      width : 300px;
+      height: 230px;
+      color:black;
+      background-size: 1000% 1000%;
+    
+      -webkit-animation: AnimationName 24s ease infinite;
+      animation: AnimationName 24s ease infinite;
+    padding: 50px;
+    color: white;
+    border-radius: 9px;
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(11, 11, 11, 0.3);
+    line-height: 1.5;
+    transform: translatey(-5%);
+    transition: transform 0.5s;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+button{
+    background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border-color:white;
+    top:43px;
+    left:230px;
+    position:relative;
+    height:20px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+  }
+  a:link {
+    color: rgb(100, 100, 100);";
+  }
+  a:visited {
+    color: rgb(100, 100, 100);;
+  }
+  /* ::placeholder {
+    background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  } */
+  ::-webkit-input-placeholder { 
+    background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+    
+  
+body{
+  
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}  
+}

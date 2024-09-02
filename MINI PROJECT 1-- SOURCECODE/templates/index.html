@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ML Model Prediction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Career Prediction System</h1>
+    
+	<form id="prediction-form">
+        <div class="drop">
+		<label for="Logical_quotient_rating">Logical Quotient Rating:</label>
+		<input type="number" id="Logical_quotient_rating" name="Logical_quotient_rating" required><br><br>
+
+		<label for="hackathons">Hackathons:</label>
+		<input type="number" id="hackathons" name="hackathons" required><br><br>
+
+		<label for="coding_skills_rating">Coding Skills Rating:</label>
+		<input type="number" id="coding_skills_rating" name="coding_skills_rating" required><br><br>
+
+		<label for="public_speaking_points">Public Speaking Points:</label>
+		<input type="number" id="public_speaking_points" name="public_speaking_points" required><br><br>
+
+		<label for="self_learning_capability">Self Learning Capability:</label>
+		<input type="number" id="self_learning_capability" name="self_learning_capability" required><br><br>
+
+		<label for="extra_courses_did">Extra Courses Did:</label>
+		<select type="number" id="extra_courses_did" name="extra_courses_did" required>
+            <option value="1">yes</option>
+                <option value="0">no</option>
+                </select><br><br>
+
+		<label for="certifications">Certifications:</label>
+		<select type="number" id="certifications" name="certifications" required>
+            <option value="4">Information security</option>
+          <option value="8">Shell programming</option>
+          <option value="7">R programming</option>
+          <option value="1">Distro making</option>
+          <option value="5">Machine learning</option>
+          <option value="2">Full stack</option>
+          <option value="3">Hadoop</option>
+          <option value="0">App development</option>
+          <option value="6">Python</option>
+    </select><br><br>
+
+		<label for="workshops">Workshops:</label>
+		<select type="number" id="workshops" name="workshops" required>
+            <option value="6">Testing</option>
+            <option value="2">Database security</option>
+            <option value="3">Game development</option>
+            <option value="1">Data science</option>
+            <option value="5">System designing</option>
+            <option value="4">Hacking</option>
+            <option value="0">Cloud computing</option>
+            <option value="7">Web technologies</option>
+      </select><br><br>
+
+		<label for="reading_and_writing_skills">Reading and Writing Skills:</label>
+		<select type="number" id="reading_and_writing_skills" name="reading_and_writing_skills" required>
+            <option value="0">poor</option>
+                <option value="1">medium</option>
+                <option value="2">excellent</option>
+                </select><br><br>
+
+		<label for="memory_capability_score">Memory Capability Score:</label>
+		<select type="number" id="memory_capability_score" name="memory_capability_score" required>
+        <option value="0">poor</option>
+                <option value="1">medium</option>
+                <option value="2">excellent</option>
+                </select><br><br>
+
+		<label for="interested_subjects">Interested Subjects:</label>
+		<select type="number" id="interested_subjects" name="interested_subjects" required>
+            <option value="9">Programming</option>
+        <option value="2">Management</option>
+        <option value="5">Data engineering</option>
+        <option value="7">Networks</option>
+        <option value="3">Software engineering</option>
+        <option value="4">Cloud computing</option>
+        <option value="8">Parallel computing</option>
+        <option value="1">IOT</option>
+        <option value="0">Computer architecture</option>
+        <option value="6">Hacking</option>
+        </select>
+        <br><br>
+
+		<label for="interested_career_area">Interested Career Area:</label>
+		<select type="number" id="interested_career_area" name="interested_career_area" required>
+            <option value="5">Testing</option>
+    <option value="4">System developer</option>
+    <option value="0">Business process analyst</option>
+      <option value="3">Security</option>
+      <option value="2">Developer</option>
+      <option value="1">Cloud computing</option>
+</select><br><br>
+
+		<label for="type_of_company_want_to_settle_in">Type of Company Want to Settle in:</label>
+		<select id="type_of_company_want_to_settle_in" name="type_of_company_want_to_settle_in" required>
+            <option value="0">BPA</option>
+            <option value="1">Cloud service</option>
+            <option value="9">Product development</option>
+            <option value="7">Testing and maintainance </option>
+            <option value="4">SAas services</option>
+            <option value="8">Web services</option>
+            <option value="2">Finance</option>
+            <option value="5">Sales and marketing</option>
+            <option value="3">Product based</option>
+            <option value="6">Service based</option>
+        </select>
+
+		<br>
+<br>
+		<label for="taken_inputs_from_seniors_or_elders">Taken Inputs from Seniors or Elders:</label>
+		<select type="number" id="taken_inputs_from_seniors_or_elders" name="taken_inputs_from_seniors_or_elders" required>
+            <option value="1">yes</option>
+                <option value="0">no</option>
+                </select><br><br>
+
+		<label for="interested_type_of_books">Interested Type of Books:</label>
+		<select type="number" id="interested_type_of_books" name="interested_type_of_books" required>
+            <option value="28">Series</option>
+            <option value="3">Autobiographies</option>
+            <option value="29">Travel</option>
+            <option value="13">Guide</option>
+            <option value="14">Health</option>
+            <option value="17">Journals</option>
+            <option value="1">Anthology</option>
+            <option value="9">Dictionaries</option>
+            <option value="21">Prayer books</option>
+            <option value="2">Art</option>
+            <option value="11">Encyclopedias</option>
+            <option value="22">Religion-Spirituality</option>
+            <option value="0">Action and adventure</option>
+            <option value="6">Comics</option>
+            <option value="16">Horror</option>
+            <option value="24">Satire</option>
+            <option value="27">Self help</option>
+            <option value="15">History</option>
+            <option value="7">Cookbooks</option>
+            <option value="18">Math</option>
+            <option value="4">Biographies</option>
+            <option value="10">Drama</option>
+            <option value="8">Diaries</option>
+            <option value="26">Science fiction</option>
+            <option value="20">Poetry</option>
+            <option value="23">Romance</option>
+            <option value="25">Science</option>
+            <option value="30">Trillogy</option>
+            <option value="5">Children</option>
+            <option value="19">Mystery</option>
+      </select><br><br>
+
+		<label for="A_management">A Management:</label>
+		<input type="number" id="A_management" name="A_management" required><br><br>
+
+		<label for="A_Technical">A Technical:</label>
+<input type="number" id="A_Technical" name="A_Technical"  required><br><br>
+
+<label for="B_hard_worker">B Hard Worker:</label>
+<input type="number" id="B_hard_worker" name="B_hard_worker"  required><br><br>
+
+<label for="B_smart_worker">B Smart Worker:</label>
+<input type="number" id="B_smart_worker" name="B_smart_worker"  required><br><br>
+
+<label for="worked_in_teams">Worked in Teams:</label>
+<select type="number" id="worked_in_teams" name="worked_in_teams"  required>
+    <option value="1">yes</option>
+                <option value="0">no</option>
+                </select><br><br>
+
+<label for="introvert">Introvert:</label>
+<select type="number" id="introvert" name="introvert"  required>
+<option value="1">yes</option>
+                <option value="0">no</option>
+                </select><br><br></div>
+                
+
+<button type="submit" id="submit-btn" style="color:black;">Predict</button>
+<button text-color:"black">
+    <a type="button" href="page3.html" >Queries</a>
+  </button><br>
+  <br><br><br>
+
+	</form>
+    <br>
+    <br>
+    <br>
+    
+
+	<div id="result"></div>
+    <script>
+        const form = document.getElementById("prediction-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const resultDiv = document.getElementById("result");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const data = {
+                // "Age": parseInt(formData.get("Age")),
+                // "SystolicBP": parseInt(formData.get("SystolicBp")),
+                // "DiastolicBP": parseInt(formData.get("DiastolicBp")),
+                // "BS": parseInt(formData.get("BS")),
+                // "BodyTemp": parseInt(formData.get("BodyTemp")),
+                // "HeartRate": parseInt(formData.get("HeartRate")),
+                "Logical_quotient_rating": parseInt(formData.get("Logical_quotient_rating")),
+                "hackathons": parseInt(formData.get("hackathons")),
+                "coding_skills_rating": parseInt(formData.get("coding_skills_rating")),
+                "public_speaking_points": parseInt(formData.get("public_speaking_points")),
+                "self_learning_capability": parseInt(formData.get("self_learning_capability")),
+                "extra_courses_did": parseInt(formData.get("extra_courses_did")),
+                "certifications": parseInt(formData.get("certifications")),
+                "workshops": parseInt(formData.get("workshops")),
+                "reading_and_writing_skills": parseInt(formData.get("reading_and_writing_skills")),
+                "memory_capability_score": parseInt(formData.get("memory_capability_score")),
+                "interested_subjects": parseInt(formData.get("interested_subjects")),
+                "interested_career_area": parseInt(formData.get("interested_career_area")),
+                "type_of_company_want_to_settle_in": parseInt(formData.get("type_of_company_want_to_settle_in")),
+                "taken_inputs_from_seniors_or_elders": parseInt(formData.get("taken_inputs_from_seniors_or_elders")),
+                "interested_type_of_books": parseInt(formData.get("interested_type_of_books")),
+                "A_management": parseInt(formData.get("A_management")),
+                "A_Technical": parseInt(formData.get("A_Technical")),
+                "B_smart_worker": parseInt(formData.get("B_smart_worker")),
+                "B_hard_worker": parseInt(formData.get("B_hard_worker")),
+                "worked_in_teams": parseInt(formData.get("worked_in_teams")),
+                "introvert": parseInt(formData.get("introvert")),
+            };
+            const response = await fetch("http://192.168.149.97:8000/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            console.log(result);
+            resultDiv.innerHTML = `<p><br> The predicted domain using machine learning is : <br> ${result.prediction} <br></p>`;
+        });
+    </script>
+    <style>
+        body{
+            left:300px;
+            
+           
+            @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+
+}
+h1 {text-align: center;
+    font-family:'Times new roman';}
+    h4{
+        font-family:'georgia';
+        left:30px;
+    }
+
+button{
+    background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border-color:white;
+  width:100px;
+  height:80px;
+    top:50px;
+    left:260px;
+    position:relative;
+    height:20px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+        
+        .drop{
+            height: 800px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 70%;
+    left: 70%;
+    bottom:25%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 50px;
+            
+ }
+ #result{
+    text-align:center;
+    border-radius:30px;
+  margin-left:150px;
+  margin-right:950px;
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 16.5px );
+  -webkit-backdrop-filter: blur( 16.5px );
+  border-radius: 30px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+ }
+    </style>
+</body>
+</html>

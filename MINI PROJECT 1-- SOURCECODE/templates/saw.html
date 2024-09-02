@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heart Disease Prediction</title>
+</head>
+
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <form id="prediction-form">
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" id="Age" required><br>
+        <label for="SystolicBp">Systolic Blood Pressure:</label>
+        <input type="number" name="SystolicBp" id="SystolicBp" required><br>
+        <label for="DiastolicBp">Diastolic Blood Pressure:</label>
+        <input type="number" name="DiastolicBp" id="DiastolicBp" required><br>
+        <label for="BS">Blood Sugar:</label>
+        <input type="number" name="BS" id="BS" required><br>
+        <label for="BodyTemp">Body Temperature:</label>
+        <input type="number" name="BodyTemp" id="BodyTemp" required><br>
+        <label for="HeartRate">Heart Rate:</label>
+        <input type="number" name="HeartRate" id="HeartRate" required><br>
+        <button type="submit" id="submit-btn">Predict</button>
+    </form>
+
+    <div id="result"></div>
+    <script>
+        const form = document.getElementById("prediction-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const resultDiv = document.getElementById("result");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const data = {
+                // "Age": parseInt(formData.get("Age")),
+                // "SystolicBP": parseInt(formData.get("SystolicBp")),
+                // "DiastolicBP": parseInt(formData.get("DiastolicBp")),
+                // "BS": parseInt(formData.get("BS")),
+                // "BodyTemp": parseInt(formData.get("BodyTemp")),
+                // "HeartRate": parseInt(formData.get("HeartRate")),
+                "Logical_quotient_rating": parseInt(formData.get("Logical_quotient_rating")),
+                "hackathons": parseInt(formData.get("hackathons")),
+                "coding_skills_rating": parseInt(formData.get("coding_skills_rating")),
+                "public_speaking_points": parseInt(formData.get("public_speaking_points")),
+                "self_learning_capability": parseInt(formData.get("self_learning_capability")),
+                "extra_courses_did": parseInt(formData.get("extra_courses_did")),
+                "certifications": parseInt(formData.get("certifications")),
+                "workshops": parseInt(formData.get("workshops")),
+                "reading_and_writing_skills": parseInt(formData.get("reading_and_writing_skills")),
+                "memory_capability_score": parseInt(formData.get("memory_capability_score")),
+                "interested_subjects": parseInt(formData.get("interested_subjects")),
+                "interested_career_area": parseInt(formData.get("interested_career_area")),
+                "type_of_company_want_to_settle_in": parseInt(formData.get("type_of_company_want_to_settle_in")),
+                "taken_inputs_from_seniors_or_elders": parseInt(formData.get("taken_inputs_from_seniors_or_elders")),
+                "interested_type_of_books": parseInt(formData.get("interested_type_of_books")),
+                "A_management": parseInt(formData.get("A_management")),
+                "A_Technical": parseInt(formData.get("A_Technical")),
+                "B_smart_worker": parseInt(formData.get("B_smart_worker")),
+                "B_hard_worker": parseInt(formData.get("B_hard_worker")),
+                "worked_in_teams": parseInt(formData.get("Age")),
+                "introvert": parseInt(formData.get("Age")),
+            };
+            const response = await fetch("http://192.168.113.186:8000/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            console.log(result);
+            resultDiv.innerHTML = `<p>The predicted outcome is: ${result.prediction}</p>`;
+        });
+    </script>
+
+</body>
+
+</html>
